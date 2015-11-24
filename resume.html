@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+        html {
+            font-size: 100%;
+            color: #333333;
+        }
+
+        .resume {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.8em;
+        }
+
+        @media print {
+            .resume {
+                margin-top: -1em;
+                font-size: 0.54em;
+            }
+        }
+
+        div, section, ul, li, h1, h2, h3, img {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        ul {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+
+        section {
+            margin: 2em 0;
+            padding: 0;
+        }
+
+        section h1 {
+            margin: 0.3em 0;
+            font-size: 1.64em;
+            font-weight: 900;
+            /*background-color: #f9f9f9;*/
+            background: linear-gradient(to right, #eeeeee, #ffffff);
+            /*box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05);*/
+            border-radius: 5px;
+            padding: 0.2em;
+        }
+
+        section h2 {
+            margin: 0.6em 0;
+            font-weight: 900;
+            font-size: 1em;
+        }
+
+        .col {
+            display: inline-block;
+        }
+
+        .education .col {
+            width: 49%;
+        }
+
+        .education .col:last-child {
+            text-align: right;
+        }
+
+        .technical-summary .col-one {
+            width: 22%;
+        }
+
+        .technical-summary .col-two {
+            width: 20%;
+        }
+
+        .technical-summary .col-three {
+            width: 24%;
+        }
+
+        .technical-summary .col-four {
+            width: 32%;
+        }
+
+        .job-heading {
+            position: relative;
+        }
+
+        .job-content {
+            padding-top: 4em;
+        }
+
+        .position, .address, .company, .period {
+            position: absolute;
+        }
+
+        .position, .period {
+            left: 0;
+        }
+
+        .address, .company {
+            right: 0;
+        }
+
+        .period, .address {
+            top: 1.84em;
+            font-style: italic;
+            font-weight: 900;
+        }
+
+        .position, .company {
+            font-size: 1.4em;
+            width: 100%;
+            font-weight: 900;
+            border-bottom: solid 1px #333333;
+        }
+
+        .company {
+            text-align: right;
+        }
+
+        .job {
+            padding: 1em 0;
+        }
+
+        .job-content .summary, .job-content .description {
+            display: table-cell;
+        }
+
+        .job-content .summary {
+            width: 35%;
+        }
+
+        .job-content .description {
+            width: 64%;
+            border-left: dotted 1px #333333;
+            padding-left: 0.8em;
+        }
+
+        .header {
+            margin: 0.8em 0;
+            font-weight: 900;
+            /*background-color: #f9f9f9;*/
+            background: linear-gradient(to right, #eeeeee, #ffffff);
+            border-radius: 6px;
+            /*box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05);*/
+            padding: 0.6em 0.6em 0.6em 0.3em;
+            position: relative;
+        }
+
+        .header .name {
+            display: inline-block;
+            font-size: 2em;
+            font-weight: 900;
+        }
+
+        .header .contact, .header .tagline {
+            font-size: 0.8em;
+            position: absolute;
+            right: 0;
+            font-weight: 400;
+            display: inline-block;
+            width: 86%;
+            margin: 0;
+            text-align: right;
+            padding: 0.2em;
+        }
+
+        .header .contact {
+            bottom: 0.2em;
+        }
+
+        .header .tagline {
+            top: 0.2em;
+            border-bottom: solid 1px #333333;
+            padding-bottom: 0.18em;
+            font-weight: 900;
+            /*font-style: italic;*/
+        }
+
+        .header .contact span {
+            display: inline-block;
+            margin-left: 1em;
+            font-size: 0.9em;
+        }
+
+        /*img {*/
+            /*height: 2em;*/
+            /*/!*position: absolute;*!/*/
+            /*top: -0.6em;*/
+            /*border: solid 1px red;*/
+            /*padding: 0;*/
+        /*}*/
+
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="resume">
+    <section class="header">
+        <div class="name">Lee Norris</div>
+        <div class="tagline">Full-stack developer with Agile and AngularJS experience</div>
+        <div class="contact">
+            <span>724.594.8135</span>
+            <span>lee.e.norris@gmail.com</span>
+            <span>www.linkedin.com/in/leenorris337</span>
+        </div>
+    </section>
+    <section class="objective">
+        <h1>Objective</h1>
+
+        <div class="content">To contribute my diligence and creativity in building a professional symbiosis wherein I
+            may
+            continuously add value to the organization that enables me to exercise and develop my skills.
+        </div>
+    </section>
+    <section class="education">
+        <h1>Education</h1>
+
+        <div class="content">
+            <div class="col">
+                <div>Penn State University</div>
+                <div>B.S. Information Science and Technology</div>
+            </div>
+            <div class="col">
+                <div>Cumulative GPA: <b>3.59</b></div>
+                <div>Major GPA: <b>3.98</b></div>
+            </div>
+    </section>
+    <section class="technical-summary">
+        <h1>Technical Summary</h1>
+
+        <div class="content">
+            <div class="col col-one">
+                <h2>UI / Presentation Development</h2>
+                <ul>
+                    <li>Angular/JavaScript/jQuery</li>
+                    <li>ASP.NET MVC / Rails</li>
+                    <li>HTML5/CSS3</li>
+                </ul>
+            </div>
+            <div class="col col-two">
+                <h2>Application Development</h2>
+                <ul>
+                    <li>C# / VB.NET</li>
+                    <li>Ruby</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="col col-three">
+                <h2>Database Development</h2>
+                <ul>
+                    <li>T-SQL (SQL Server 2005 - 2012)</li>
+                    <li>Entity Framework and SSDT</li>
+                    <li>PL/SQL (Oracle 9-11) (novice)</li>
+                </ul>
+            </div>
+            <div class="col col-four">
+                <h2>Business Intelligence</h2>
+                <ul>
+                    <li>Microsoft Business Intelligence (SSAS/SSIS/SSRS)</li>
+                    <li>iTextSharp PDF Reports</li>
+                    <br/>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="work-experience">
+        <h1>Work Experience</h1>
+
+        <div class="job">
+            <div class="job-heading">
+                <div class="position">Application Developer III</div>
+                <div class="company">Philips Respironics</div>
+                <div class="period">July 2015 - Present</div>
+                <div class="address">1001 Murry Ridge Lane, Murrysville, PA 15668</div>
+            </div>
+            <div class="job-content">
+                <div class="summary">
+                    <!--<h2>Position-Specific Summary</h2>-->
+
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>AngularJS 1.4</li>
+                        <li>NodeJS 4.2.2</li>
+                        <li>PhantomJS 1.9.8</li>
+                        <li>AWS CLI</li>
+                        <li>Cloud Foundry</li>
+                        <li>Java 8</li>
+                        <li>Karma/Jasmine</li>
+                        <li>Grunt</li>
+                    </ul>
+
+                    <h2>Software</h2>
+                    <ul>
+                        <li>WebStorm</li>
+                        <li>IntelliJ</li>
+                        <li>TeamCity</li>
+                        <li>GitLab</li>
+                        <li>Git</li>
+                        <li>Cloud Foundry CLI</li>
+                        <li>AWS CLI</li>
+                        <li>Rally</li>
+                    </ul>
+                </div>
+                <div class="description">
+
+                    <h2>Client-Facing Web Development of Healthcare Application</h2>
+                    <ul>
+                        <li>Creating SPA style user interface with Angular 1.4</li>
+                        <li>Authoring directives, controllers, and services for views</li>
+                        <li>Defining and implementing UX to meet business requirements and comply with regulations</li>
+                    </ul>
+
+                    <h2>Building reporting solution for rendering PDF reports programmatically</h2>
+                    <ul>
+                        <li>Using PhantomJS (1.9.8) to render PDF snapshot of web application’s rendered HTML</li>
+                        <li>Authoring NodeJS (4.2.2) components for server side infrastructure (routing, controlling
+                            Phantom,
+                            pushing to S3)
+                        </li>
+                        <li>Administering AWS EC2 instances for load testing and deployment (autoscaling &
+                            load-balancing
+                            instances)
+                        </li>
+                    </ul>
+
+                    <h2>Back-End Web Development</h2>
+                    <ul>
+                        <li>
+                            Light backend development with Java 8 to create REST controllers
+                        </li>
+                    </ul>
+
+                    <h2>Agile Development</h2>
+                    <ul>
+                        <li>Contributing to continuous build cycle</li>
+                        <li>Participating in sprints and daily stand-ups</li>
+                        <li>Working on user stories and defects</li>
+                        <li>Prototyping and iterating on designs</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-heading">
+                <div class="position">Software Engineer</div>
+                <div class="company">UPMC TDC</div>
+                <div class="period">June 2014 - July 2015</div>
+                <div class="address">6425 Penn Ave, Pittsburgh, PA</div>
+            </div>
+            <div class="job-content">
+                <div class="summary">
+                    <!--<h2>Position-Specific Summary</h2>-->
+
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>Angular 1.3</li>
+                        <li>Rails 3</li>
+                        <li>Jade / HAML</li>
+                        <li>Karma/Jasmine</li>
+                    </ul>
+
+                    <h2>Software</h2>
+                    <ul>
+                        <li>Software</li>
+                        <li>Jira</li>
+                        <li>RubyMine 5</li>
+                        <li>Git</li>
+                        <li>Phabricator</li>
+                        <li>Oracle SQL Developer</li>
+                        <li>Jenkins</li>
+                        <li>Rally</li>
+                        <li>Oracle VirtualBox VM</li>
+                        <li>Node Package Manager</li>
+                        <li>Bower Package Manager</li>
+                        <li>Grunt</li>
+                        <li>Jasmine / Karma / Protractor</li>
+                    </ul>
+                </div>
+                <div class="description">
+
+
+                    <h2>Front-End Web Development on MyUPMC (A client-facing web app for UPMC patients and doctors)</h2>
+                    <ul>
+                        <li>Creating SPA-style user interfaces with the Angular framework (v1.3) and authoring
+                            directives,
+                            services, filters, forms, etc.
+                        </li>
+                        <li>Using SASS to precompile CSS and implement mobile-first responsive design</li>
+                        <li>Precompiling HTML views and authoring reusable view components with Jade</li>
+                        <li>Writing and running unit tests with Jasmine and Karma</li>
+                        <li>Automating tasks with GruntJS</li>
+                    </ul>
+
+                    <h2>Back-End Web Development</h2>
+                    <ul>
+                        <li>Authoring Ruby (Rails 3) controllers and models to provide an API for the front end</li>
+                        <li>Validating and persisting user input</li>
+                        <li>Verifying and consuming web services</li>
+                        <li>Writing and running unit tests with RSpec</li>
+                    </ul>
+
+                    <h2>Agile Development</h2>
+                    <ul>
+                        <li>Contributing to continuous build cycle</li>
+                        <li>Participating in sprints and daily stand-ups</li>
+                        <li>Working on user stories and defects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-heading">
+                <div class="position">Programmer/Analyst</div>
+                <div class="company">Giant Eagle, Inc.</div>
+                <div class="period">April 2012 – June 2014</div>
+                <div class="address">575 Epsilon Drive, Pittsburgh, PA</div>
+            </div>
+            <div class="job-content">
+                <div class="summary">
+                    <!--<h2>Position-Specific Summary</h2>-->
+
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>C# 3.5 to 4.5</li>
+                        <li>ASP.NET MVC 3</li>
+                        <li>SSRS/SSAS/SSIS</li>
+                        <li>Oracle 11</li>
+                        <li>Entity Framework 5</li>
+                    </ul>
+
+                    <h2>Software</h2>
+                    <ul>
+                        <li>Visual Studio 2005/2008/2010/2012</li>
+                        <li>SQL Server Management Studio 2012</li>
+                        <li>Oracle SQL Developer</li>
+                        <li>Toad for Oracle</li>
+                        <li>TortoiseSVN (Apache Subversion source control client for Windows)</li>
+                        <li>Winmerge</li>
+                        <li>Putty (Telnet and SSH client used to login to Linux from Windows)</li>
+                        <li>Automic / UC4 (Enterprise scheduling tool)</li>
+                        <li>AutoSys (Enterprise scheduling tool)</li>
+                        <li>Internet Information Services (IIS) 7.0</li>
+                        <li>CitrixReceiver</li>
+                    </ul>
+                </div>
+                <div class="description">
+                    <h2>Analysis, Design and Documentation</h2>
+                    <ul>
+                        <li>Defining requirements by interviewing users and analyzing systems/applications</li>
+                        <li>Identifying potential optimizations within existing business processes that can be realized
+                            via
+                            system/application enhancements
+                        </li>
+                        <li>Architecting layers of new applications to provide optimal maintainability and extensibility
+                        </li>
+                        <li>Documenting user requirements, developer assumptions, and effort estimations for project
+                            work or
+                            ad hoc maintenance and enhancements
+                        </li>
+                        <li>Documenting system architecture, database design, data flow, and processes</li>
+                    </ul>
+
+                    <h2>System Implementation</h2>
+                    <ul>
+                        <li>Implementing business logic and infrastructural concerns in C# (.NET 2.0 through .NET 4.5)
+                        </li>
+                        <li>Linq (lambdas, funcs, delegates, actions)</li>
+                        <li>Async/Await (light use)</li>
+                        <li>Reflection</li>
+                        <li>MS Test Suite</li>
+                        <li>Deploying code to development and productions environments via in-house-developed
+                            build-server
+                            and through Visual Studio (SSAS/SSIS)
+                        </li>
+                    </ul>
+                    <h2>Web Development</h2>
+                    <ul>
+                        <li>Creating responsive HTML5 user interfaces with AJAX (XML and JSON)</li>
+                        <li>Implementing client-side validation with JavaScript/jQuery</li>
+                        <li>Styling pages and controls with CSS and jQuery UI</li>
+                        <li>Enhancing/maintaining existing ASP.NET web forms apps</li>
+                        <li>Using .NET WebAPI to simulate third party application for testing</li>
+                    </ul>
+                    <h2>System Integration</h2>
+                    <ul>
+                        <li>Implementing new interfaces between existing systems via direct SQL updates, file transfers,
+                            XML
+                            exchanges, and HTTP-Posts
+                        </li>
+                        <li>Modifying existing interfaces to support changing business needs</li>
+                    </ul>
+
+                    <h2>Database Development</h2>
+                    <ul>
+                        <li>Creating and running DML/DDL database scripts against Oracle and SQL Server</li>
+                        <li>Designing and implementing databases to 3NF (third normal form)</li>
+                        <li>Creating stored procedures (T-SQL) to perform complex, multi-table inserts/updates</li>
+                        <li>Creating PL/SQL functions to promote DRYer reports and increase power-user productivity</li>
+                        <li>Leveraging/maintaining in-house-developed .NET object-relational-mapping (ORM) assemblies
+                        </li>
+                        <li>Working with Entity Framework 6 (primarily the "code-last" flavor) to read-from/write-to
+                            existing databases
+                        </li>
+                    </ul>
+                    <h2>Level III Application Support</h2>
+                    <ul>
+                        <li>Taking support calls off-hours for logistics application support</li>
+                        <li>Resolving issues with vendor-sourced systems as well as in-house-developed applications</li>
+                        <li>Determining root causes of system bugs and employing appropriate fix</li>
+                    </ul>
+
+                    <h2>Business Intelligence Development</h2>
+                    <ul>
+                        <li>SQL Server Integration Services (SSIS)</li>
+                        <li>Performing ETL operations on relational databases</li>
+                        <li>Dynamically creating partitions on existing tabular cubes from relation database sources
+                        </li>
+                        <li>Performing basic table maintenance operations on relation databases such as purging</li>
+                        <li>SQL Server Analysis Services (SSAS)</li>
+                        <li>Performing ETL operations to create tabular cubes for reporting</li>
+                        <li>Dynamically creating new tabular cube partitions based on variable date parameters such as
+                            calendar months
+                        </li>
+                        <li>SQL Server Reporting Services (SSRS)</li>
+                        <li>Creating/maintaining reports that run against Oracle and SQL Server with SQL Server
+                            Reporting
+                            Services (SSRS) 2005/2012
+                        </li>
+                        <li>Connecting SSRS reports via drill-through links, which enable a “details-view” of the data
+                            displayed in summary reports
+                        </li>
+                        <li>Converting Cognos or Crystal reports to SSRS</li>
+                        <li>Embedding VB.NET code in SSRS reports to enable complex data manipulations or formatting
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="job">
+            <div class="job-heading">
+                <div class="position">Junior ASP.NET Developer</div>
+                <div class="company">Information Age Technologies</div>
+                <div class="period">March 2011 – March 2012</div>
+                <div class="address">220 Bessemer Road, Mount Pleasant, PA</div>
+            </div>
+            <div class="job-content">
+                <div class="summary">
+                    <!--<h2>Position-Specific Summary</h2>-->
+
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>C# 2.0 to 4.5</li>
+                        <li>ASP.NET</li>
+                        <li>VB.NET</li>
+                        <li>SQL Server</li>
+                    </ul>
+
+                    <h2>Software</h2>
+                    <ul>
+                        <li>TFS – Team Foundation Server</li>
+                        <li>Visual Studio 2008/2010</li>
+                        <li>SQL Server Management Studio</li>
+                        <li>Rumba Data Access Client (Terminal Emulator for IBM DB2)</li>
+                        <li>Bomgar</li>
+                        <li>TechInline</li>
+                        <li>GoToMyPC</li>
+                        <li>Internet Information Services (IIS) 7.0</li>
+                        <li>CitrixReceiver</li>
+                    </ul>
+                </div>
+                <div class="description">
+                    <h2>Desktop Web Development and Support for Copilot (Proprietary ASP.NET web application with SQL
+                        Server
+                        2008 R2 backend)</h2>
+
+                    <h2>User Experience Design and Development</h2>
+                    <ul>
+                        <li>Determining the content to show on each page</li>
+                        <li>Planning content layout and color schemes</li>
+                        <li>Mapping out the state transition between pages</li>
+                        <li>Ensuring that the finished product looks smooth and professional</li>
+                    </ul>
+                    <h2>Business Logic Development</h2>
+                    <ul>
+                        <li>Designing and implementing business objects and processes as classes and methods</li>
+                    </ul>
+                    <h2>System Analysis and Design</h2>
+                    <ul>
+                        <li>Interviewing users to define system requirements for enhancements</li>
+                        <li>Creating user interface prototypes and getting user feedback (similar to Agile approach)
+                        </li>
+                    </ul>
+                    <h2>Software Testing</h2>
+                    <ul>
+                        <li>Debugging JavaScript, C# application code, and database SQL / T-SQL</li>
+                    </ul>
+                    <h2>Software Support</h2>
+                    <ul>
+                        <li>On-site and phone support in English and Spanish</li>
+                        <li>Determining root causes of system bugs and employing appropriate fix</li>
+                    </ul>
+
+                    <h2>Mobile/Desktop Web Development for Client Site (Two ASP.NET web applications with WCF service
+                        layer
+                        and IBM DB2 backend)</h2>
+
+                    <h2>Database Development</h2>
+                    <ul>
+                        <li>Testing quality and structure of DB2 tables (files) via SQL queries</li>
+                        <li>Writing queries against client’s DB2 database</li>
+                        <li>Using ASNA DataGate middleware as connective tissue between DB2 and .NET</li>
+                        <li>Performance tuning queries</li>
+                        <li>Creating PDF reports with iTextSharp</li>
+                        <li>Writing queries to insert/update IBM DB2 database records based on user interactions inside
+                            the
+                            browser
+                        </li>
+                    </ul>
+                    <h2>Service Layer Implementation</h2>
+                    <ul>
+                        <li>Exposing .NET business logic via Windows Communication Foundation (WCF) services</li>
+                        <li>Consuming WCF services in ASP.NET web forms applications</li>
+                    </ul>
+                    <h2>Business Logic Development</h2>
+                    <ul>
+                        <li>Designing and implementing business objects and processes as classes and methods</li>
+                        <li>Exposing business logic via a WCF (Windows Communication Foundation) service layer</li>
+                    </ul>
+                    <h2>Software Testing</h2>
+                    <ul>
+                        <li>Cross-browser testing of mobile site</li>
+                    </ul>
+
+                    <h2>Area Agency on Aging (AAA) Social Assistance Management Software (SAMS) Support (Contract)</h2>
+                    <ul>
+                        <li>Answering users’ technical questions regarding software use and government policies</li>
+                        <li>Manipulating data as a Social Assistance Management Software (SAMS) administrator</li>
+                        <li>Documenting and explaining application utilization best practices</li>
+                        <li>Complying with government privacy and security policies regarding user data</li>
+                        <li>Writing ad hoc reports for organizational supervisors or governmental/regional meetings</li>
+                        <li>Resolve web/phone tickets coming into the Allegheny County AAA Social Assistance Management
+                            Software (SAMS) Support Portal
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
+
+
+
+
+
+
