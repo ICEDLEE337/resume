@@ -45,12 +45,14 @@
         section h1 {
             margin: 0.3em 0;
             font-size: 1.64em;
-            font-weight: 900;
-            /*background-color: #f9f9f9;*/
-            background: linear-gradient(to right, #eeeeee, #ffffff);
-            /*box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05);*/
-            border-radius: 5px;
+            border-radius: 2px;
             padding: 0.2em;
+        }
+
+        .header, section h1 {
+            background: linear-gradient(to right, #e9e9f6, #f0f0f0);
+            border-radius: 2px;
+            font-weight: 900;
         }
 
         section h2 {
@@ -144,72 +146,78 @@
 
         .header {
             margin: 0.8em 0;
-            font-weight: 900;
-            /*background-color: #f9f9f9;*/
-            background: linear-gradient(to right, #eeeeee, #ffffff);
-            border-radius: 6px;
-            /*box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05);*/
-            padding: 0.6em 0.6em 0.6em 0.3em;
+            padding: 0.1em 0.1em 0.1em 0.3em;
             position: relative;
         }
 
         .header .name {
             display: inline-block;
-            font-size: 2em;
+            font-size: 2.8em;
             font-weight: 900;
         }
 
-        .header .contact, .header .tagline {
-            font-size: 0.8em;
-            position: absolute;
-            right: 0;
-            font-weight: 400;
-            display: inline-block;
-            width: 86%;
-            margin: 0;
-            text-align: right;
-            padding: 0.2em;
-        }
+        /*.header .contact, .header .tagline {*/
+            /*font-size: 0.8em;*/
+            /*position: absolute;*/
+            /*right: 0;*/
+            /*font-weight: 400;*/
+            /*display: inline-block;*/
+            /*width: 86%;*/
+            /*margin: 0;*/
+            /*text-align: right;*/
+            /*padding: 0.2em;*/
+        /*}*/
 
         .header .contact {
-            bottom: 0.2em;
+            position: absolute;
+            left: 130px;
+            bottom: 0;
+            font-size: 0.8em;
+            line-height: 10px;
         }
 
-        .header .tagline {
-            top: 0.2em;
-            border-bottom: solid 1px #333333;
-            padding-bottom: 0.18em;
-            font-weight: 900;
-            /*font-style: italic;*/
+        .header .contact img {
+            height: 9px;
         }
 
         .header .contact span {
             display: inline-block;
             margin-left: 1em;
-            font-size: 0.9em;
+            font-size: 0.86em;
         }
 
-        /*img {*/
-            /*height: 2em;*/
-            /*/!*position: absolute;*!/*/
-            /*top: -0.6em;*/
-            /*border: solid 1px red;*/
-            /*padding: 0;*/
-        /*}*/
+        .header > img {
+            height: 30px;
+        }
+
+        .images {
+            float: right;
+            position: relative;
+            top: -11px;
+        }
 
     </style>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="http://getbootstrap.com/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="resume">
     <section class="header">
         <div class="name">Lee Norris</div>
-        <div class="tagline">Full-stack developer with Agile and AngularJS experience</div>
         <div class="contact">
-            <span>724.594.8135</span>
-            <span>lee.e.norris@gmail.com</span>
-            <span>www.linkedin.com/in/leenorris337</span>
+            <div><img src="images/phone.png" style="padding-left: 2px;"> <span> 724.594.8135</span></div>
+            <div><img src="images/mail.png"> <span>lee.e.norris@gmail.com</span></div>
+            <div><img src="images/in.png"> <span>www.linkedin.com/in/leenorris337</span></div>
         </div>
+        <div class="images">
+            <img style="height: 29px; position: absolute; top: 13px; right: 240px; border: solid 1px #fff;" class="html" src="images/js.png"/>
+            <img style="height: 29px; position: absolute; top: 14px; right: 196px;" class="html"
+                 src="images/html5.png"/>
+            <img style="height: 32px; position: absolute; top: 12px; right: 154px;" class="css" src="images/css.png"/>
+            <img style="height: 60px; position: absolute; top: -3px; right: 100px;" class="ng" src="images/ng.png"/>
+            <img style="height: 40px; position: absolute; top: 3px; right: 5px;" class="node" src="images/node.svg"/>
+        </div>
+        <!--<img style="height: 30px; position: absolute; top: 3px; right: 10px;" class="psu" src="images/psu.png"/>-->
     </section>
     <section class="objective">
         <h1>Objective</h1>
@@ -549,6 +557,7 @@
         </div>
         <br/>
         <br/>
+
         <div class="job">
             <div class="job-heading">
                 <div class="position">Junior ASP.NET Developer</div>
