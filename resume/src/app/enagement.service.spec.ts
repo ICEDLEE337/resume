@@ -2,8 +2,9 @@ import {TestBed} from '@angular/core/testing';
 import {Engagements} from '../backend/Engagements';
 import {EnagementService} from './enagement.service';
 import {IEngagement} from 'src/types/IEngagement';
+import {Mocks} from '../test-helpers/Mocks';
 
-fdescribe('EnagementService', () => {
+describe('EnagementService', () => {
   let service: EnagementService;
   let sampleEngagement: IEngagement;
 
@@ -12,12 +13,13 @@ fdescribe('EnagementService', () => {
 
   describe('GIVEN: and IEngagement is provided as a parameter', () => {
     beforeEach(() => {
-      sampleEngagement = Engagements.getEngagements()[0];
+      sampleEngagement = Mocks.getSampleEngagement();
     });
     it('should format an IEngagement address as a single line', () => {
       const expectedResult = 'Mount Pleasant, PA 15666';
-      const actualResult = expect(service.getClientAddress(sampleEngagement))
-      .toEqual(expectedResult);
+      const actualResult = service.getClientAddress(sampleEngagement);
+      expect(actualResult)
+        .toEqual(expectedResult);
     });
   });
 });

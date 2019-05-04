@@ -3,18 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EnagagementComponent } from './enagagement/enagagement.component';
+import { EngagementComponent } from './engagement/engagement.component';
+
+import { MaterialModule } from './material/material.module';
+import {EnagementService} from './enagement.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnagagementComponent
+    EngagementComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    EnagementService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    EngagementComponent
+  ]
 })
 export class AppModule { }
