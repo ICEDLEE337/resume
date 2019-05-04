@@ -1,10 +1,6 @@
 import {IClient} from "src/types/IClient";
 
 const PA = 'PA';
-const SENIOR_SOFTWARE_ENGINEER = 'Senior Software Engineer';
-const CONSULTANT = 'Consultant';
-const startDate = toDate.bind(null, 'start');
-const endDate = toDate.bind(null, 'end');
 const PGH = 'Pittsburgh';
 
 export class Clients {
@@ -16,13 +12,6 @@ export class Clients {
         addressLineOne: '1400 Ashwood Drive',
         addressLineTwo: 'Suite 1403',
         city: 'Canonsburg',
-        engagements: [
-            {
-                start: startDate(2016, 3),
-                end: endDate(2016, 7),
-                title: SENIOR_SOFTWARE_ENGINEER,
-            }
-        ]
     };
 
     static PHILIPS_RESPIRONICS: IClient = {
@@ -32,18 +21,6 @@ export class Clients {
         city: 'Murrysville',
         zip: 15668,
         zipExtension: 8517,
-        engagements: [
-            {
-                start: startDate(2015, 7),
-                end: endDate(2016, 3),
-                title: SENIOR_SOFTWARE_ENGINEER
-            },
-            {
-                start: startDate(2016, 7),
-                end: endDate(2019, 8),
-                title: SENIOR_SOFTWARE_ENGINEER
-            }
-        ]
     };
 
     static IAT_TECHNOLOGIES: IClient = {
@@ -52,11 +29,6 @@ export class Clients {
         addressLineOne: '220 Bessemer Rd',
         city: 'Mount Pleasant',
         zip: 15666,
-        engagements: [{
-            start: startDate(2011, 3),
-            end: endDate(2012, 3),
-            title: 'Junior Developer'
-        }]
     };
 
     static UPMC_TECHNOLOGY_DEVELOPMENT_CENTER: IClient = {
@@ -66,11 +38,6 @@ export class Clients {
         addressLineTwo: '#200',
         city: PGH,
         zip: 15206,
-        engagements: [{
-            start: startDate(2014, 6),
-            end: endDate(2015, 7),
-            title: 'Software Developer'
-        }]
     };
 
     static GIANT_EAGLE: IClient = {
@@ -78,13 +45,15 @@ export class Clients {
         city: PGH,
         addressLineOne: '101 Kappa Drive',
         name: 'Giant Eagle, Inc',
-        engagements: [
-            {
-                start: startDate(2012, 4),
-                end: endDate(2014, 5),
-                title: 'Programmer/Analyst'
-            }
-        ]
+        zip: 15238
+    };
+
+    static PENN_STATE: IClient = {
+        name: 'Penn State University',
+        addressLineOne: '3550 7th Street Rd',
+        city: 'New Kensington',
+        state: PA,
+        zip: 15068
     };
 
     static FOUR_C_TECHNOLOGIES: IClient = {
@@ -94,11 +63,6 @@ export class Clients {
         addressLineOne: '1500 Ardmore Blvd',
         addressLineTwo: 'Suite 100',
         zip: 15221,
-        engagements: [{
-            end: endDate(2017, 6),
-            start: startDate(2017, 4),
-            title: CONSULTANT,
-        }]
     };
 
     static getClients (): IClient[] {
@@ -112,8 +76,4 @@ export class Clients {
             // Clients.PHILIPS_RESPIRONICS,
         ];
     }
-}
-
-function toDate (year: number, month: number, day?: number): Date {
-    return new Date();
 }

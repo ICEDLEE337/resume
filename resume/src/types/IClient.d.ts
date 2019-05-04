@@ -5,9 +5,8 @@ export interface IClient {
     website?: string;
     addressLineOne?: string;
     addressLineTwo?: string;
-    city?: string;
-    state?: string;
-    zip?: number;
+    city: string;
+    state: string;
+    zip: number;
     zipExtension?: number;
-    engagements: IEngagement[];
 }
