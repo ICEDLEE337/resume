@@ -1,15 +1,15 @@
 import {TestBed} from '@angular/core/testing';
 import {Engagements} from '../backend/Engagements';
-import {EnagementService} from './enagement.service';
+import {EngagementService} from './enagement.service';
 import {IEngagement} from 'src/types/IEngagement';
 import {Mocks} from '../test-helpers/Mocks';
 
-describe('EnagementService', () => {
-  let service: EnagementService;
+describe('EngagementService', () => {
+  let service: EngagementService;
   let sampleEngagement: IEngagement;
 
   beforeEach(() => TestBed.configureTestingModule({}));
-  beforeEach(() => service = TestBed.get(EnagementService));
+  beforeEach(() => service = TestBed.get(EngagementService));
 
   describe('GIVEN: and IEngagement is provided as a parameter', () => {
     beforeEach(() => {

@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngagementComponent } from './engagement/engagement.component';
 
 import { MaterialModule } from './material/material.module';
-import {EnagementService} from './enagement.service';
+import {EngagementService} from './enagement.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import {EnagementService} from './enagement.service';
     MaterialModule
   ],
   providers: [
-    EnagementService
+    EngagementService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

@@ -10,4 +10,5 @@ import {Mocks} from 'src/test-helpers/Mocks';
 export class AppComponent {
   title = 'resume';
   engagement: IEngagement = Mocks.getSampleEngagement();
+
 }

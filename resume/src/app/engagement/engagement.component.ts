@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {IEngagement} from 'src/types/IEngagement';
+import {EngagementService} from '../enagement.service';
 
 @Component({
   selector: 'app-engagement',
@@ -9,10 +10,15 @@ import {IEngagement} from 'src/types/IEngagement';
 export class EngagementComponent implements OnInit {
   @Input() engagement: IEngagement;
 
-  constructor () {}
+  constructor (private engagementSvc: EngagementService) {}
 
   ngOnInit () {
     console.warn(this.engagement);
+  }
+
+
+  getClientAddress (engagement: IEngagement): string {
+    return this.engagementSvc.getClientAddress(engagement);
   }
 
 }
