@@ -10,10 +10,9 @@ import {Engagements} from 'src/backend/Engagements';
 export class AppComponent implements OnInit {
   constructor(private engagementDb: Engagements){}
   ngOnInit (): void {
-    this.engagement = Engagements.getEngagements()[0];
-    console.warn(this.engagement);
+    this.engagements = Engagements.getEngagements();
   }
   title = 'resume';
-  engagement: IEngagement;
+  engagements: IEngagement[];
 
 }

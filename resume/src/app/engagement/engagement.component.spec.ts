@@ -12,7 +12,7 @@ describe('EngagementComponent', () => {
   let fixture: ComponentFixture<EngagementComponent>;
   let sampleEngagement: IEngagement;
   let engagementSvc: EngagementService;
-  let assertions: Assertions<EngagementComponent>;
+  let assertions: Assertions<EngagementComponent, IEngagement>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

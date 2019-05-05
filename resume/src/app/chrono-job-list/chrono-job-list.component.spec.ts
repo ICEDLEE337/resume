@@ -12,7 +12,7 @@ describe('ChronoJobListComponent', () => {
   let component: ChronoJobListComponent;
   let fixture: ComponentFixture<ChronoJobListComponent>;
   let sampleEngagements: IEngagement[];
-  let assertions: Assertions<ChronoJobListComponent>;
+  let assertions: Assertions<ChronoJobListComponent, IEngagement>;
   let engagementsDb: Engagements;
 
   beforeEach(async(() => {
@@ -41,10 +41,8 @@ describe('ChronoJobListComponent', () => {
     });
 
     it('should render one EngagementComponent per IEngagement', () => {
-      sampleEngagements.forEach(eng => {
-        const content = 'app-engagement';
-        assertions.verifyOuterHtml({selector: null, content});
-      });
+      const childComponentSelector = 'app-engagement';
+      assertions.verifyComponentInvocationForAll(sampleEngagements, childComponentSelector)
     });
   });
 });
