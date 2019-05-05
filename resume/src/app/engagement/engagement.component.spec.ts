@@ -3,28 +3,28 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {EngagementComponent} from './engagement.component';
 import {By} from '@angular/platform-browser';
 import {IEngagement} from 'src/types/IEngagement';
-import {Mocks} from 'src/test-helpers/Mocks';
 import {MaterialModule} from '../material/material.module';
 import {EngagementService} from '../enagement.service';
 import {Assertions} from 'src/test-helpers/Assertions';
+import {Engagements} from 'src/backend/Engagements';
 describe('EngagementComponent', () => {
   let component: EngagementComponent;
   let fixture: ComponentFixture<EngagementComponent>;
   let sampleEngagement: IEngagement;
   let engagementSvc: EngagementService;
-  let assertions: Assertions;
+  let assertions: Assertions<EngagementComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [EngagementComponent],
       imports: [MaterialModule],
-      providers: [EngagementService]
+      providers: [EngagementService, Engagements]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    sampleEngagement = Mocks.getSampleEngagement();
+    sampleEngagement = Engagements.getEngagements()[0];
     engagementSvc = TestBed.get(EngagementService);
   });
 
@@ -32,8 +32,9 @@ describe('EngagementComponent', () => {
     fixture = TestBed.createComponent(EngagementComponent);
     component = fixture.componentInstance;
     component.engagement = sampleEngagement;
+    console.warn(sampleEngagement);
     fixture.detectChanges();
-    assertions = new Assertions(fixture);
+    assertions = new Assertions(fixture, expect);
   });
 
   describe('GIVEN: an IEngagement is defined on the component', () => {

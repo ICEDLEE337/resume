@@ -8,6 +8,7 @@ import { EngagementComponent } from './engagement/engagement.component';
 import { MaterialModule } from './material/material.module';
 import {EngagementService} from './enagement.service';
 import { ChronoJobListComponent } from './chrono-job-list/chrono-job-list.component';
+import {Engagements} from 'src/backend/Engagements';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChronoJobListComponent } from './chrono-job-list/chrono-job-list.compon
     MaterialModule
   ],
   providers: [
-    EngagementService
+    EngagementService,
+    Engagements
   ],
   bootstrap: [AppComponent],
   entryComponents: [

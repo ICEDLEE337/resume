@@ -13,7 +13,6 @@ export class EngagementComponent implements OnInit {
   constructor (private engagementSvc: EngagementService) {}
 
   ngOnInit () {
-    console.warn(this.engagement);
   }
 
   getClientAddress (engagement: IEngagement): string {

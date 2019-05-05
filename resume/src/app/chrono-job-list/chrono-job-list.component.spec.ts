@@ -1,20 +1,25 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ChronoJobListComponent} from './chrono-job-list.component';
-import {Mocks} from 'src/test-helpers/Mocks';
 import {IEngagement} from 'src/types/IEngagement';
 import {Assertions} from 'src/test-helpers/Assertions';
 import {asElementData} from '@angular/core/src/view';
+import {EngagementComponent} from '../engagement/engagement.component';
+import {MaterialModule} from '../material/material.module';
+import {Engagements} from 'src/backend/Engagements';
 
 describe('ChronoJobListComponent', () => {
   let component: ChronoJobListComponent;
   let fixture: ComponentFixture<ChronoJobListComponent>;
   let sampleEngagements: IEngagement[];
-  let assertions: Assertions;
+  let assertions: Assertions<ChronoJobListComponent>;
+  let engagementsDb: Engagements;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ChronoJobListComponent]
+      imports: [MaterialModule],
+      declarations: [ChronoJobListComponent, EngagementComponent],
+      providers: [Engagements]
     })
       .compileComponents();
   }));
@@ -22,12 +27,13 @@ describe('ChronoJobListComponent', () => {
   describe('GIVEN: a list of IEngagements are defined on the component', () => {
 
     beforeEach(() => {
-      sampleEngagements = Mocks.getSampleEngagements();
+      engagementsDb = TestBed.get(Engagements);
+      sampleEngagements = Engagements.getEngagements();
       fixture = TestBed.createComponent(ChronoJobListComponent);
       component = fixture.componentInstance;
       component.engagements = sampleEngagements;
-      assertions = new Assertions(fixture);
       fixture.detectChanges();
+      assertions = new Assertions(fixture, expect);
     });
 
     it('should create', () => {
@@ -36,7 +42,8 @@ describe('ChronoJobListComponent', () => {
 
     it('should render one EngagementComponent per IEngagement', () => {
       sampleEngagements.forEach(eng => {
-        assertions.verifyOuterHtml({selector: '.engagement', content: '<app-engagement'});
+        const content = 'app-engagement';
+        assertions.verifyOuterHtml({selector: null, content});
       });
     });
   });

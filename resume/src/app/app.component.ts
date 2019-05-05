@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IEngagement} from 'src/types/IEngagement';
-import {Mocks} from 'src/test-helpers/Mocks';
+import {Engagements} from 'src/backend/Engagements';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private engagementDb: Engagements){}
+  ngOnInit (): void {
+    this.engagement = Engagements.getEngagements()[0];
+    console.warn(this.engagement);
+  }
   title = 'resume';
-  engagement: IEngagement = Mocks.getSampleEngagement();
+  engagement: IEngagement;
+
 }
