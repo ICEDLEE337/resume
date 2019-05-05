@@ -36,10 +36,6 @@ describe('ChronoJobListComponent', () => {
       assertions = new Assertions(fixture, expect);
     });
 
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    });
-
     it('should render one EngagementComponent per IEngagement', () => {
       const childComponentSelector = 'app-engagement';
       assertions.verifyComponentInvocationForAll(sampleEngagements, childComponentSelector)
