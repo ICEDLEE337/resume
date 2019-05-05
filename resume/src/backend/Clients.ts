@@ -12,6 +12,7 @@ export class Clients {
         addressLineOne: '1400 Ashwood Drive',
         addressLineTwo: 'Suite 1403',
         city: 'Canonsburg',
+        image: 'assets/rivers-agile.png',
     };
 
     static PHILIPS_RESPIRONICS: IClient = {
@@ -21,6 +22,7 @@ export class Clients {
         city: 'Murrysville',
         zip: 15668,
         zipExtension: 8517,
+        image: 'assets/philips.png',
     };
 
     static IAT_TECHNOLOGIES: IClient = {
@@ -29,6 +31,7 @@ export class Clients {
         addressLineOne: '220 Bessemer Rd',
         city: 'Mount Pleasant',
         zip: 15666,
+        image: 'assets/iat.png',
     };
 
     static UPMC_TECHNOLOGY_DEVELOPMENT_CENTER: IClient = {
@@ -38,6 +41,7 @@ export class Clients {
         addressLineTwo: '#200',
         city: PGH,
         zip: 15206,
+        image: 'assets/upmc.png',
     };
 
     static GIANT_EAGLE: IClient = {
@@ -45,7 +49,8 @@ export class Clients {
         city: PGH,
         addressLineOne: '101 Kappa Drive',
         name: 'Giant Eagle, Inc',
-        zip: 15238
+        zip: 15238,
+        image: 'assets/giant-eagle.jpeg'
     };
 
     static PENN_STATE: IClient = {
@@ -53,6 +58,7 @@ export class Clients {
         addressLineOne: '3550 7th Street Rd',
         city: 'New Kensington',
         state: PA,
+        image: 'assets/psu.png',
         zip: 15068
     };
 
@@ -62,6 +68,7 @@ export class Clients {
         name: '4C Technologies',
         addressLineOne: '1500 Ardmore Blvd',
         addressLineTwo: 'Suite 100',
+        image: 'assets/4c.png',
         zip: 15221,
     };
 

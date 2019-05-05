@@ -26,7 +26,6 @@ describe('EngagementComponent', () => {
     engagementSvc = TestBed.get(EngagementService);
   });
 
-
   beforeEach(() => {
     fixture = TestBed.createComponent(EngagementComponent);
     component = fixture.componentInstance;
@@ -43,6 +42,11 @@ describe('EngagementComponent', () => {
     it('should contain the client address', () => {
       expect(fixture.debugElement.query(By.css('.client-address')).nativeElement.innerText)
         .toEqual(engagementSvc.getClientAddress(sampleEngagement));
+    });
+
+    it('should contain the client image', () => {
+      expect(fixture.debugElement.query(By.css('.client-image')).nativeElement.outerHTML)
+        .toContain(engagementSvc.getClientImage(sampleEngagement));
     });
   });
 });

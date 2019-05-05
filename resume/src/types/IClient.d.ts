@@ -9,4 +9,5 @@ export interface IClient {
     state: string;
     zip: number;
     zipExtension?: number;
+    image?: string;
 }
