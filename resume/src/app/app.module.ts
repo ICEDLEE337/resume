@@ -7,11 +7,13 @@ import { EngagementComponent } from './engagement/engagement.component';
 
 import { MaterialModule } from './material/material.module';
 import {EngagementService} from './enagement.service';
+import { ChronoJobListComponent } from './chrono-job-list/chrono-job-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EngagementComponent,
+    ChronoJobListComponent,
   ],
   imports: [
     BrowserModule,
