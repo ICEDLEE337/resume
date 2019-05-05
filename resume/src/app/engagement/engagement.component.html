@@ -1,7 +1,7 @@
 <mat-card>
-  <!-- <mat-card-header> -->
-  <span class="client-name"> {{engagement|json}}</span>
+  <mat-card-header>
+  <mat-card-title class="client-name"> {{engagement.client.name}}</mat-card-title>
   <!-- <mat-card-subtitle>{{getClientAddress(enagement.client.name)}}</mat-card-subtitle> -->
   <!-- <img mat-card-avatar [src]="enagement.image" /> -->
-  <!-- </mat-card-header> -->
+  </mat-card-header>
 </mat-card>

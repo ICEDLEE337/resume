@@ -34,7 +34,7 @@ describe('EngagementComponent', () => {
   describe('GIVEN: an IEngagement is defined on the component', () => {
     it('should contain the client name', () => {
       expect(fixture.debugElement.query(By.css('.client-name')).nativeElement.innerText)
-        .toBeTruthy();
+        .toEqual(sampleEngagement.client.name);
     });
   });
 });
