@@ -6,11 +6,13 @@ import {IEngagement} from 'src/types/IEngagement';
 import {Mocks} from 'src/test-helpers/Mocks';
 import {MaterialModule} from '../material/material.module';
 import {EngagementService} from '../enagement.service';
+import {Assertions} from 'src/test-helpers/Assertions';
 describe('EngagementComponent', () => {
   let component: EngagementComponent;
   let fixture: ComponentFixture<EngagementComponent>;
   let sampleEngagement: IEngagement;
   let engagementSvc: EngagementService;
+  let assertions: Assertions;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,19 +33,20 @@ describe('EngagementComponent', () => {
     component = fixture.componentInstance;
     component.engagement = sampleEngagement;
     fixture.detectChanges();
+    assertions = new Assertions(fixture);
   });
 
   describe('GIVEN: an IEngagement is defined on the component', () => {
 
     it('should contain the client name', () => {
-      verifyInnerText({
+      assertions.verifyInnerText({
         selector: '.client-name',
         content: sampleEngagement.client.name
       });
     });
 
     it('should contain the client address', () => {
-      verifyInnerText({
+      assertions.verifyInnerText({
         selector: '.client-address',
         content: engagementSvc.getClientAddress(sampleEngagement)
       });
@@ -51,31 +54,13 @@ describe('EngagementComponent', () => {
 
     it('should contain the client image', () => {
       const content = engagementSvc.getClientImage(sampleEngagement)
-      verifyOuterHtml({
+      assertions.verifyOuterHtml({
         selector: '.client-image',
         content
       });
     });
+
   });
 
-  function verifyHtml ({selector, property, content}): void {
-    expect(fixture.debugElement.query(By.css(selector)).nativeElement[property])
-      .toContain(content);
-  }
-
-  function verifyInnerHtml ({selector, content}): void {
-    const property = 'innerHTML';
-    verifyHtml({selector, property, content});
-  }
-
-  function verifyOuterHtml ({selector, content}): void {
-    const property = 'outerHTML';
-    verifyHtml({selector, property, content});
-  }
-
-  function verifyInnerText ({selector, content}): void {
-    const property = 'innerText';
-    verifyHtml({selector, property, content});
-  }
 });
 
