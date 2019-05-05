@@ -34,19 +34,48 @@ describe('EngagementComponent', () => {
   });
 
   describe('GIVEN: an IEngagement is defined on the component', () => {
+
     it('should contain the client name', () => {
-      expect(fixture.debugElement.query(By.css('.client-name')).nativeElement.innerText)
-        .toEqual(sampleEngagement.client.name);
+      verifyInnerText({
+        selector: '.client-name',
+        content: sampleEngagement.client.name
+      });
     });
 
     it('should contain the client address', () => {
-      expect(fixture.debugElement.query(By.css('.client-address')).nativeElement.innerText)
-        .toEqual(engagementSvc.getClientAddress(sampleEngagement));
+      verifyInnerText({
+        selector: '.client-address',
+        content: engagementSvc.getClientAddress(sampleEngagement)
+      });
     });
 
     it('should contain the client image', () => {
-      expect(fixture.debugElement.query(By.css('.client-image')).nativeElement.outerHTML)
-        .toContain(engagementSvc.getClientImage(sampleEngagement));
+      const content = engagementSvc.getClientImage(sampleEngagement)
+      verifyOuterHtml({
+        selector: '.client-image',
+        content
+      });
     });
   });
+
+  function verifyHtml ({selector, property, content}): void {
+    expect(fixture.debugElement.query(By.css(selector)).nativeElement[property])
+      .toContain(content);
+  }
+
+  function verifyInnerHtml ({selector, content}): void {
+    const property = 'innerHTML';
+    verifyHtml({selector, property, content});
+  }
+
+  function verifyOuterHtml ({selector, content}): void {
+    const property = 'outerHTML';
+    verifyHtml({selector, property, content});
+  }
+
+  function verifyInnerText ({selector, content}): void {
+    const property = 'innerText';
+    verifyHtml({selector, property, content});
+  }
 });
+

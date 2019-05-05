@@ -16,7 +16,6 @@ export class EngagementComponent implements OnInit {
     console.warn(this.engagement);
   }
 
-
   getClientAddress (engagement: IEngagement): string {
     return this.engagementSvc.getClientAddress(engagement);
   }
