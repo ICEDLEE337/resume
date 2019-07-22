@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngagementComponent } from './engagement/engagement.component';
 
 import { MaterialModule } from './material/material.module';
-import {EngagementService} from './enagement.service';
+
 import { ChronoJobListComponent } from './chrono-job-list/chrono-job-list.component';
 import {Engagements} from 'src/backend/Engagements';
+import {EngagementService} from './engagement/enagement.service';
 
 @NgModule({
   declarations: [

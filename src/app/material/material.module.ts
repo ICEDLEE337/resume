@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatCardModule, MatCard, MatCardTitle, MatCardSubtitle, MatCardHeader, MatCardAvatar} from '@angular/material';
+import {MatCardModule, MatCard, MatCardTitle, MatCardSubtitle, MatCardHeader, MatCardAvatar, MatListModule} from '@angular/material';
 import {LayoutModule} from '@angular/cdk/layout';
 
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -12,7 +12,8 @@ import {LayoutModule} from '@angular/cdk/layout';
     LayoutModule
   ],
   exports: [
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ]
 })
 export class MaterialModule {}

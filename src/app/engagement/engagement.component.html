@@ -4,4 +4,14 @@
     <mat-card-subtitle class="client-address">{{getClientAddress(engagement)}}</mat-card-subtitle>
     <img mat-card-avatar [src]="engagement.client.image" class="client-image" />
   </mat-card-header>
+  <mat-card-content>
+    <section *ngFor="let category of engagement.categories">
+      <h3>{{category.title}}</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let activity of category.activities">
+          {{activity}}
+        </mat-list-item>
+      </mat-list>
+    </section>
+  </mat-card-content>
 </mat-card>

@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {IEngagement} from 'src/types/IEngagement';
-import {EngagementService} from '../enagement.service';
+import {EngagementService} from './enagement.service';
 
 @Component({
   selector: 'app-engagement',

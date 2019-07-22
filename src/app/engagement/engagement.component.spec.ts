@@ -4,9 +4,10 @@ import {EngagementComponent} from './engagement.component';
 import {By} from '@angular/platform-browser';
 import {IEngagement} from 'src/types/IEngagement';
 import {MaterialModule} from '../material/material.module';
-import {EngagementService} from '../enagement.service';
+
 import {Assertions} from 'src/test-helpers/Assertions';
 import {Engagements} from 'src/backend/Engagements';
+import {EngagementService} from './enagement.service';
 describe('EngagementComponent', () => {
   let component: EngagementComponent;
   let fixture: ComponentFixture<EngagementComponent>;
