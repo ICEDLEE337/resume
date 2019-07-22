@@ -15,6 +15,8 @@
             max-width: 1200px;
             margin: 0 auto;
             font-size: 0.8em;
+            border-left: solid 80px #ffffff;
+            border-right: solid 80px #ffffff;
         }
 
         @media print {
@@ -50,8 +52,9 @@
         }
 
         .header, section h1 {
-            background: linear-gradient(to right, #e9e9f6, #f0f0f0);
+            /* background: linear-gradient(to right,#dddddd, #ffffff); */
             border-radius: 2px;
+            border-bottom: dotted 1px #aaaaaa;
             font-weight: 900;
         }
 
@@ -93,8 +96,23 @@
             position: relative;
         }
 
+        .job-with-watermark {
+            background-image: url('images/OM_LOGO.jpg');
+            /* background-position-x: 20%; */
+            background-position: 10em 6em;
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+            background-size: 160px;
+        }
+
         .job-content {
             padding-top: 4em;
+            background-color: rgba(255, 255, 255, 0.6);
+
+        }
+
+        .content h2 {
+            font-size: 1.1em;
         }
 
         .position, .address, .company, .period {
@@ -119,13 +137,21 @@
             font-size: 1.4em;
             width: 100%;
             font-weight: 900;
-            border-bottom: solid 1px #333333;
         }
 
         .company {
             text-align: right;
+            border-bottom: dotted 1px #aaaaaa;
         }
 
+        .company img {
+            height: 1.2em;
+            position: relative;
+            top: 2px;
+            margin-right: 4px;
+            display: inline-block;
+            border-radius: 4px;
+        }
         .job {
             padding: 1em 0;
         }
@@ -140,7 +166,7 @@
 
         .job-content .description {
             width: 64%;
-            border-left: dotted 1px #333333;
+            border-left: dotted 1px #aaaaaa;
             padding-left: 0.8em;
         }
 
@@ -196,6 +222,14 @@
             top: -11px;
         }
 
+        #om {
+            height: 8em;
+            display: inline-block;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+
     </style>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="http://getbootstrap.com/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular" rel="stylesheet" type="text/css">
@@ -204,12 +238,12 @@
 <div class="resume">
     <section class="header">
         <div class="name">Lee Norris</div>
-        <div class="contact">
+        <!-- <div class="contact">
             <div><img src="images/phone.png" style="padding-left: 2px; position:relative; top: 1px; left: -1px;"> <span> 724.594.8135</span></div>
             <div><img src="images/mail.png"> <span>lee.e.norris@gmail.com</span></div>
             <div><img src="images/in.png"> <span>www.linkedin.com/in/leenorris337</span></div>
-        </div>
-        <div class="images">
+        </div> -->
+        <!-- <div class="images">
             <img style="height: 38px; position: absolute; top: 9px; right: 280px;" class="ms" src="images/ms.png"/>
 
             <img style="height: 29px; position: absolute; top: 13px; right: 240px; border: solid 1px #fff;" class="html" src="images/js.png"/>
@@ -218,8 +252,9 @@
             <img style="height: 32px; position: absolute; top: 12px; right: 154px;" class="css" src="images/css.png"/>
             <img style="height: 60px; position: absolute; top: -3px; right: 100px;" class="ng" src="images/ng.png"/>
             <img style="height: 40px; position: absolute; top: 3px; right: 5px;" class="node" src="images/node.svg"/>
-        </div>
+        </div> -->
         <!--<img style="height: 30px; position: absolute; top: 3px; right: 10px;" class="psu" src="images/psu.png"/>-->
+        <img src="images/OM_LOGO.jpg" id="om" />
     </section>
     <section class="objective">
         <h1>Objective</h1>
@@ -249,7 +284,7 @@
             <div class="col col-one">
                 <h2>UI / Presentation Development</h2>
                 <ul>
-                    <li>AngularJS/React/JavaScript/jQuery</li>
+                    <li>Angular/AngularJS/React</li>
                     <li>ASP.NET MVC / Rails</li>
                     <li>HTML5/CSS3</li>
                 </ul>
@@ -257,25 +292,25 @@
             <div class="col col-two">
                 <h2>Application Development</h2>
                 <ul>
-                    <li>C# / VB.NET</li>
-                    <li>Java</li>
+                    <li>NodeJS (JavaScript/TypeScript)</li>
+                    <li>C# / Java</li>
                     <li>Ruby</li>
                 </ul>
             </div>
             <div class="col col-three">
                 <h2>Database Development</h2>
                 <ul>
-                    <li>T-SQL (SQL Server 2005 - 2012)</li>
-                    <li>Entity Framework and SSDT</li>
-                    <li>PL/SQL (Oracle 9-11) (novice)</li>
+                    <li>MongoDB</li>
+                    <li>T-SQL Entity Framework</li>
+                    <li>PostgreSQL, Oracle, MySql</li>
                 </ul>
             </div>
             <div class="col col-four">
                 <h2>Business Intelligence</h2>
                 <ul>
+                    <li>Custom Reporting via Server-Side UI Rendering</li>
                     <li>Microsoft Business Intelligence (SSAS/SSIS/SSRS)</li>
                     <li>iTextSharp PDF Reports</li>
-                    <br/>
                 </ul>
             </div>
         </div>
@@ -286,8 +321,8 @@
         <div class="job">
             <div class="job-heading">
                 <div class="position">Application Developer III</div>
-                <div class="company">Philips Respironics</div>
-                <div class="period">July 2016 - Present</div>
+                <div class="company"><img src="images/philips.png" />Philips Respironics</div>
+                <div class="period">July 2016 - August 2019</div>
                 <div class="address">1001 Murry Ridge Lane, Murrysville, PA 15668</div>
             </div>
             <div class="job-content">
@@ -355,7 +390,7 @@
         <div class="job">
                 <div class="job-heading">
                     <div class="position">Developer / Consultant</div>
-                    <div class="company">360Fly / Rivers Agile Solutions</div>
+                    <div class="company"><img src="images/rivers-agile.png" />360Fly / Rivers Agile Solutions</div>
                     <div class="period">March 2016 - July 2016</div>
                     <div class="address">1400 Ashwood Dr #1403, Canonsburg, PA 15317</div>
                 </div>
@@ -390,7 +425,7 @@
         <div class="job">
             <div class="job-heading">
                 <div class="position">Application Developer III</div>
-                <div class="company">Philips Respironics</div>
+                <div class="company"><img src="images/philips.png" />Philips Respironics</div>
                 <div class="period">July 2015 - March 2016</div>
                 <div class="address">1001 Murry Ridge Lane, Murrysville, PA 15668</div>
             </div>
@@ -466,7 +501,7 @@
         <div class="job">
             <div class="job-heading">
                 <div class="position">Software Engineer</div>
-                <div class="company">UPMC TDC</div>
+                <div class="company"><img src="images/upmc.png" />UPMC TDC</div>
                 <div class="period">June 2014 - July 2015</div>
                 <div class="address">6425 Penn Ave, Pittsburgh, PA</div>
             </div>
@@ -534,7 +569,7 @@
         <div class="job">
             <div class="job-heading">
                 <div class="position">Programmer/Analyst</div>
-                <div class="company">Giant Eagle, Inc.</div>
+                <div class="company"><img src="images/giant-eagle.jpeg" />Giant Eagle, Inc.</div>
                 <div class="period">April 2012 – June 2014</div>
                 <div class="address">575 Epsilon Drive, Pittsburgh, PA</div>
             </div>
@@ -664,7 +699,7 @@
         <div class="job">
             <div class="job-heading">
                 <div class="position">Junior ASP.NET Developer</div>
-                <div class="company">Information Age Technologies</div>
+                <div class="company"><img src="images/iat.png" />Information Age Technologies</div>
                 <div class="period">March 2011 – March 2012</div>
                 <div class="address">220 Bessemer Road, Mount Pleasant, PA</div>
             </div>
