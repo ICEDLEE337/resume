@@ -174,10 +174,15 @@
             margin: 0.8em 0;
             padding: 0.1em 0.1em 0.1em 0.3em;
             position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* justify-items: baseline; */
+            align-items: center;
         }
 
         .header .name {
-            display: inline-block;
+            /* display: inline-block; */
             font-size: 2.8em;
             font-weight: 900;
         }
@@ -222,12 +227,20 @@
             top: -11px;
         }
 
-        #om {
-            height: 8em;
+        #vendor-logo {
+            height: 4em;
             display: inline-block;
             position: fixed;
-            right: 0;
+            right: 4em;
             top: 0;
+        }
+
+        .b {
+            font-weight: 900;
+        }
+
+        .i {
+            font-style: italic;
         }
 
     </style>
@@ -238,23 +251,15 @@
 <div class="resume">
     <section class="header">
         <div class="name">Lee Norris</div>
-        <!-- <div class="contact">
-            <div><img src="images/phone.png" style="padding-left: 2px; position:relative; top: 1px; left: -1px;"> <span> 724.594.8135</span></div>
-            <div><img src="images/mail.png"> <span>lee.e.norris@gmail.com</span></div>
-            <div><img src="images/in.png"> <span>www.linkedin.com/in/leenorris337</span></div>
-        </div> -->
-        <!-- <div class="images">
-            <img style="height: 38px; position: absolute; top: 9px; right: 280px;" class="ms" src="images/ms.png"/>
-
-            <img style="height: 29px; position: absolute; top: 13px; right: 240px; border: solid 1px #fff;" class="html" src="images/js.png"/>
-            <img style="height: 29px; position: absolute; top: 14px; right: 196px;" class="html"
-                 src="images/html5.png"/>
-            <img style="height: 32px; position: absolute; top: 12px; right: 154px;" class="css" src="images/css.png"/>
-            <img style="height: 60px; position: absolute; top: -3px; right: 100px;" class="ng" src="images/ng.png"/>
-            <img style="height: 40px; position: absolute; top: 3px; right: 5px;" class="node" src="images/node.svg"/>
-        </div> -->
-        <!--<img style="height: 30px; position: absolute; top: 3px; right: 10px;" class="psu" src="images/psu.png"/>-->
-        <img src="images/OM_LOGO.jpg" id="om" />
+        <div>
+            <div class="b">Raeder Landree, Inc.</div>
+            <small class="i">Technical Staffing Services</small>
+        </div>
+        <div>
+            <div>300 MT.LEBANON BLVD. &bull; SUITE 301 &bull; PITTSBURGH, PA 15234</div>
+            <div>TEL 412-561-2367 &bull; FAX 412-561-4614 &bull; WWW.RAEDERLANDREE.COM</div>
+        </div>
+        <img src="images/raeder-landree.png" id="vendor-logo" />
     </section>
     <section class="objective">
         <h1>Objective</h1>
@@ -277,7 +282,7 @@
                 <div>Major GPA: <b>3.98</b></div>
             </div>
     </section>
-    <section class="technical-summary">
+    <!-- <section class="technical-summary">
         <h1>Technical Summary</h1>
 
         <div class="content">
@@ -314,9 +319,74 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="work-experience">
         <h1>Work Experience</h1>
+
+        <div class="job">
+            <div class="job-heading">
+                <div class="position">Senior Developer</div>
+                <div class="company"><img src="images/arcadia.png" />Arcadia</div>
+                <div class="period">August 2019 - present</div>
+                <div class="address">965 Greentree Road, Pittsburgh, PA 15220</div>
+            </div>
+            <div class="job-content">
+                <div class="summary">
+                    <!--<h2>Position-Specific Summary</h2>-->
+
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>Angular 10</li>
+                        <li>Docker</li>
+                        <li>NodeJS 14</li>
+                        <li>NestJS</li>
+                        <li>Jest</li>
+                        <li>Nx</li>
+                        <li>PostgreSQL</li>
+                        <li>Ruby on Rails</li>
+                        <li>KafkaJS</li>
+                    </ul>
+
+                    <h2>Software</h2>
+                    <ul>
+                        <li>GitHub</li>
+                        <li>Git</li>
+                        <li>AWS CLI</li>
+                        <li>Jira</li>
+                        <li>Confluence</li>
+                    </ul>
+                </div>
+                <div class="description">
+
+                    <h2>Front-End Web Development of Healthcare Application</h2>
+                    <ul>
+                        <li>Creating SPA style user interface with Angular 10</li>
+                        <li>Authoring directives, controllers, pipes, guards and services for views</li>
+                        <li>Unit testing with Jest</li>
+                    </ul>
+
+                    <h2>Reporting</h2>
+                    <ul>
+                        <li>Create Dockerized NestJS application to generate PDFs per requirements</li>
+                    </ul>
+
+                    <h2>Back-End Web Development</h2>
+                    <ul>
+                        <li>
+                            Maintianing/enhancing monolithic Ruby on Rails app to support Angular client application requirements
+                        </li>
+                        <li>
+                            Writing server-side logic in NestJS to push data to/from PostgreSQL as well as other HTTP microservices
+                        </li>
+                    </ul>
+
+                    <h2>Dev-Ops and Scripting</h2>
+                    <ul>
+                        <li>Scripting (BASH/NodeJs) to automate chores/tasks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="job">
             <div class="job-heading">
@@ -339,7 +409,6 @@
                         <li>Java 8</li>
                         <li>Karma/Jasmine</li>
                         <li>Webpack 4</li>
-                        <li>
                     </ul>
 
                     <h2>Software</h2>
